@@ -1,2 +1,2 @@
-# JavascriptPlatformer
-A Javascript platformer
+# JSPlatformer
+JS Platformer for DIG 3480C
