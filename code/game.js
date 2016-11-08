@@ -111,7 +111,7 @@ function Lava(pos, ch) {
     this.speed = new Vector(0, 2);
   } else if (ch == "v") {
     // Drip lava. Repeat back to this pos.
-    this.speed = new Vector(0, .8);
+    this.speed = new Vector(0, 1.2);
     this.repeatPos = pos;
   }
 }
