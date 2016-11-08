@@ -3,7 +3,8 @@ var actorChars = {
   "@": Player,
   "c": Coin, // A coin will wobble up and down
   "=": Lava, "|": Lava, "v": Lava,
-  "s": Speed
+  "s": Speed,
+  "-": Slow
 };
 
 function Level(plan) {
@@ -97,6 +98,14 @@ function Speed(pos) {
   this.wobble = Math.random() * Math.PI * 2;
 }
 Speed.prototype.type = "speed";
+
+function Slow(pos) {
+  this.basePos = this.pos = pos.plus(new Vector(0.2, 0.1));
+  this.size = new Vector(0.3, 0.3);
+  // Make it go back and forth in a sine wave.
+  this.wobble = Math.random() * Math.PI * 2;
+}
+Slow.prototype.type = "slow";
 
 // Lava is initialized based on the character, but otherwise has a
 // size and position
@@ -309,6 +318,12 @@ Speed.prototype.act = function(step) {
   this.pos = this.basePos.plus(new Vector(0, wobblePos));
 };
 
+Slow.prototype.act = function(step) {
+  this.wobble += step * wobbleSpeed;
+  var wobblePos = Math.sin(this.wobble) * wobbleDist;
+  this.pos = this.basePos.plus(new Vector(0, wobblePos));
+};
+
 var maxStep = 0.05;
 
 var playerXSpeed = 7;
@@ -392,6 +407,11 @@ Level.prototype.playerTouched = function(type, actor) {
 		playerXSpeed = 14;
       return other != actor;
     });
+  } else if (type == "slow") {
+	this.actors = this.actors.filter(function(other) {
+		playerXSpeed = 3;
+      return other != actor;
+    });  
   }
 };
 

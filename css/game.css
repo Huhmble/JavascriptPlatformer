@@ -9,6 +9,7 @@
 .player { background: white; }
 .coin { background: yellow; }
 .speed { background: blue; }
+.slow { background: orange; }
 .game {
   overflow: hidden;
   max-width: 600px;
