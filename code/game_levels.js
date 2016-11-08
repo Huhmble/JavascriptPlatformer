@@ -1,5 +1,5 @@
 var GAME_LEVELS = [
-  /*["  x                                                                          x  ",
+  ["  x                                                                          x  ",
    "  x                                           c           c                ccx  ",
    "  x                                     c           c           c          ccx  ",
    "  x                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx x  ",
@@ -20,7 +20,7 @@ var GAME_LEVELS = [
    "                              x                        x   x                    ",
    "                              x!!!!!!!!!!!!!!!!!!!!!!!!!!!!x                    ",
    "                              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                    ",
-   "                                                                                "],*/
+   "                                                                                "],
   ["xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
    "x        x  c                            x                                x      x!!!!!!!!!!!!!!!!!!!!!!!!!!!!!v!x",
    "x        x                               x c                            c x      x!!!!!!!!!!!!v!!!v!!!!v!!!!!!! !x",
